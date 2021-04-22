@@ -1,3 +1,16 @@
-<p>
-  AgregarContacto works!
-</p>
+
+<div class="contacto">
+  <div>
+    <img src="{{contacto.foto}}" alt="">
+  </div>
+  <div>
+    <ul>
+      <li>"{{contacto.nombre}}"</li>
+      <li>"{{contacto.apellidos}}"</li>
+      <li>"{{contacto.direccion}}"</li>
+      <li>"{{contacto.correo}}"</li>
+      <li>"{{contacto.telefono}}"</li>
+      <li [ngClass]="{ 'bloqueado': contacto.bloqueado, 'no-bloqueado': !contacto.bloqueado }">  </li>
+    </ul>
+  </div>
+</div>

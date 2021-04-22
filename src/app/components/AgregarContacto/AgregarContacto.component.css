@@ -1,0 +1,12 @@
+.contacto{
+    display:flex;
+    border: 3px blue solid;
+    border-radius: 2px;
+}
+
+.bloqueado{
+    background-color:red;
+}
+.no-bloqueado{
+    background-color: cadetblue;
+}
