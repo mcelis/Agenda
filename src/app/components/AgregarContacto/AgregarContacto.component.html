@@ -1,16 +1,26 @@
 
 <div class="contacto">
-  <div>
-    <img src="{{contacto.foto}}" alt="">
+  <div class="foto">
+      <img src="{{contacto.foto}}">
   </div>
-  <div>
-    <ul>
-      <li>"{{contacto.nombre}}"</li>
-      <li>"{{contacto.apellidos}}"</li>
-      <li>"{{contacto.direccion}}"</li>
-      <li>"{{contacto.correo}}"</li>
-      <li>"{{contacto.telefono}}"</li>
-      <li [ngClass]="{ 'bloqueado': contacto.bloqueado, 'no-bloqueado': !contacto.bloqueado }">  </li>
-    </ul>
+  <div class="datosContacto">
+      <ul>
+          <li> {{contacto.nombre }} {{contacto.apellidos }}</li>
+          <li> {{contacto.direccion }}</li>
+          <li> {{contacto.correo }}</li>
+          <li> {{contacto.telefono }}</li>
+          <li [ngClass]="{ 'bloqueado': contacto.bloqueado, 'no-bloqueado': !contacto.bloqueado }">
+              <span *ngIf="!contacto.bloqueado else blockeado"> Amigo!</span>
+              <ng-template #blockeado> <span>Bloqueado!</span> </ng-template>
+          </li>
+      </ul>
   </div>
+  <div class="botones">
+      <button class="btn-positivo"> Editar </button>
+      <button class="btn-negativo" (click)="bloquear(contacto)" [ngClass]="{ 'btn-negativo': !contacto.bloqueado, 'btn-desbloquear': contacto.bloqueado }">
+          <span *ngIf="!contacto.bloqueado else desbloquear"> Bloquear</span>
+          <ng-template #desbloquear> <span>Desbloquear</span> </ng-template> </button>
+      <button (click)="eliminarContacto(contacto.telefono)">Eliminar</button>
+  </div>
+
 </div>

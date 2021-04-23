@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input, Output, EventEmitter} from '@angular/core';
+import { Router } from '@angular/router';
 import { Contacto } from 'src/app/models/contacto';
 
 
@@ -9,11 +10,20 @@ import { Contacto } from 'src/app/models/contacto';
 })
 export class AgregarContactoComponent implements OnInit {
 
-  contacto: Contacto;
-  constructor() { }
+  @Input() contacto = {} as Contacto; 
+  @Output() borrarContacto = new EventEmitter<number>();
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
-    this.contacto = new Contacto("Marco","Celis","Calle 12","m@gmail.com",300267765,false,"https://cdn.icon-icons.com/icons2/1378/PNG/128/avatardefault_92824.png");
+  }
+
+  bloquear(contacto:Contacto){
+    contacto.bloqueado = !contacto.bloqueado;
+  }
+  eliminarContacto(telefono: number){
+    this.borrarContacto.emit(telefono);
   }
 
 }

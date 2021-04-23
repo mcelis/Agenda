@@ -1,12 +1,98 @@
-.contacto{
-    display:flex;
-    border: 3px blue solid;
-    border-radius: 2px;
+.contacto {
+    display: flex;
+    /*border: 3px #1c4ef1 solid;*/
+    border-radius: 20px;
+    color: #2c2a2a;
+    font-weight: bold;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #4ECDC4;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    box-shadow: 10px 5px 5px rgb(56, 54, 54);
 }
 
-.bloqueado{
-    background-color:red;
+.contacto ul {
+    margin-left: 0px;
+    padding-left: 0px;
 }
-.no-bloqueado{
-    background-color: cadetblue;
+
+.datosContacto {
+    width: 100%;
+}
+
+.datosContacto li {
+    background: #F7FFF7;
+    margin: 2px;
+    border-radius: 10px;
+    list-style: none;
+    padding: 3px;
+    font-size: 0.8rem;
+}
+
+.datosContacto .bloqueado {
+    display: flex;
+    background-color: #FF6B6B;
+    padding: 8px;
+    width: 50px;
+    font-size: 0.7rem;
+    height: 12px;
+    border-radius: 35%;
+    justify-content: center;
+    color: #F7FFF7;
+}
+
+.datosContacto .no-bloqueado {
+    display: flex;
+    background-color: #1A535C;
+    padding: 8px;
+    width: 50px;
+    font-size: 0.7rem;
+    height: 12px;
+    border-radius: 35%;
+    justify-content: center;
+    margin: 5px;
+    color: #F7FFF7;
+}
+
+.botones {
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    width: 100px;
+    color: #2c2a2a;
+}
+
+.btn-negativo {
+    background-color: #FF6B6B;
+}
+
+.btn-positivo {
+    background-color: #FFE66D;
+}
+
+.btn-desbloquear {
+    background-color: #1A535C;
+    color: #F7FFF7;
+}
+
+.foto {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.foto img {
+    height: 128px;
+    width: 128px;
+    border-radius: 50%;
 }
