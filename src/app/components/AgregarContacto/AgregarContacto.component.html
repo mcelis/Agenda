@@ -17,7 +17,7 @@
   </div>
   <div class="botones">
       <button class="btn-positivo"> Editar </button>
-      <button class="btn-negativo" (click)="bloquear(contacto)" [ngClass]="{ 'btn-negativo': !contacto.bloqueado, 'btn-desbloquear': contacto.bloqueado }">
+      <button class="btn-negativo" (click)="bloquearContacto(contacto)" [ngClass]="{ 'btn-negativo': !contacto.bloqueado, 'btn-desbloquear': contacto.bloqueado }">
           <span *ngIf="!contacto.bloqueado else desbloquear"> Bloquear</span>
           <ng-template #desbloquear> <span>Desbloquear</span> </ng-template> </button>
       <button (click)="eliminarContacto(contacto.telefono)">Eliminar</button>

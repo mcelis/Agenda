@@ -1,1 +1,1 @@
-<app-AgregarContacto *ngFor="let contacto of contactos" [contacto]="contacto" (borrarContacto)="borrarC($event)"></app-AgregarContacto>
+<app-AgregarContacto *ngFor="let contacto of contactos" [contacto]="contacto" (borrarContacto)="borrarC($event)" (eventoBloquear)="bloquearC($event)"></app-AgregarContacto>

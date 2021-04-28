@@ -12,6 +12,7 @@ export class AgregarContactoComponent implements OnInit {
 
   @Input() contacto = {} as Contacto; 
   @Output() borrarContacto = new EventEmitter<number>();
+  @Output() eventoBloquear = new EventEmitter<Contacto>();
   constructor(
     private router: Router
   ) { }
@@ -19,8 +20,8 @@ export class AgregarContactoComponent implements OnInit {
   ngOnInit() {
   }
 
-  bloquear(contacto:Contacto){
-    contacto.bloqueado = !contacto.bloqueado;
+  bloquearContacto(contacto:Contacto){
+    this.eventoBloquear.emit(contacto);
   }
   eliminarContacto(telefono: number){
     this.borrarContacto.emit(telefono);

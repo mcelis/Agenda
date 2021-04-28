@@ -1,0 +1,33 @@
+<div >
+  <h1>Nuevo Contacto</h1>
+</div>
+<div class="formulario">
+
+  <div>
+    <span>Vista previa de la foto:</span>
+    <img [src]="foto" alt="">
+  </div>
+  <form>
+    <div>
+      <input type="text" name="nombre"  [(ngModel)]="nombre" placeholder="Nombre">
+    </div>
+    <div>
+      <input type="text" name="apellido" [(ngModel)]="apellido" placeholder="Apellido">
+    </div>
+    <div>
+      <input type="text" name="direccion" [(ngModel)]="direccion" placeholder="Direccion">
+    </div>
+    <div>
+      <input type="text" name="correo" [(ngModel)]="correo" placeholder="Email">
+    </div>
+    <div>
+      <input type="text" name="telefono" [(ngModel)]="telefono" placeholder="Telefono">
+    </div>
+    <div>
+      <input type="text" name="foto" [(ngModel)]="foto" placeholder="Foto">
+    </div>
+    <div>
+      <button (click)="asignarContacto()">Actualizar Contacto</button>
+    </div>
+  </form>
+</div>
